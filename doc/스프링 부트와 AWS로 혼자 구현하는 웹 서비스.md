@@ -4,11 +4,12 @@
 
 ```
 - com.lifi.springboot
-    |--- web 
-        |--- dto
-            |--- HelloResponseDto.java
-        |--- HelloController.java
-    |--- application.java
+    |--- web 
+          |--- dto
+                |--- HelloResponseDto.java
+    |--- 
+    |--- HelloController.java
+    |--- application.java
 ```
 
 ## 요구사항 분석

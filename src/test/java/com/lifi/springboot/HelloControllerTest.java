@@ -1,5 +1,6 @@
-package com.lifi.springboot.web;
+package com.lifi.springboot;
 
+import com.lifi.springboot.web.HelloController;
 import org.junit.Test;
 
 

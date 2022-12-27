@@ -1,4 +1,4 @@
-package com.lifi.springboot.dto;
+package com.lifi.springboot.web.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
