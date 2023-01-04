@@ -1,41 +1,46 @@
 {{>layout/header}}
 <h1>스프링 부트로 시작하는 웹서비스 Ver.2</h1>
 <div class="col-md-12">
-    <div class="col-md-4">
-        <form>
-            <div class="form-group">
-                <label for="title">제목</label>
-                <input type="text" class="form-control"
-                       id="title" placeholder="제목을 입력하세요">
+    <div class="row">
+        <div class="col-md-4">
 
-            </div>
-            <div class="form-group">
-                <label for="author"> 작성자 </label>
-                <input type="text" class="form-control"
-                       id="author" placeholder="작성자를 입력하세요">
+            <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+            <!-- <a>는 하이퍼링크를 걸어주는 태그이다.
+                속성에는 href, target이 있으며 각각은 아래와 같은 역할을 한다.
 
-            </div>
-            <div class="form-group">
-                <label for="content"> 내용 </label>
-                <textarea class="form-control"
-                       id="content" placeholder="내용을 입력하세요"></textarea>
-            </div>
-        </form>
-        <a href="/" role="button" class="btn btn-secondary">취소</a>
-        <button type="button" class="btn btn-primary" id="btn-save">글 등록</button>
-        <!-- <a>는 하이퍼링크를 걸어주는 태그이다.
-            속성에는 href, target이 있으며 각각은 아래와 같은 역할을 한다.
+                - href: 클릭시 이동할 링크
 
-            - href: 클릭시 이동할 링크
-
-            - target: 링크를 여는 방법
-                # _self: 현재 페이지(기본 값)
-                # _blank: 새 탭
-                # _parent: 부모 페이지로, iframe 등이 사용된 환경에서 쓰인다고 한다.
-                # _top: 최상위 페이지로, iframe 등이 사용된 환경에서 쓰인다고 한다.
-                # (사용자 정의 프레임): 직접 프레임 이름을 명시해서 사용할 수도 있다.
-            -->
+                - target: 링크를 여는 방법
+                    # _self: 현재 페이지(기본 값)
+                    # _blank: 새 탭
+                    # _parent: 부모 페이지로, iframe 등이 사용된 환경에서 쓰인다고 한다.
+                    # _top: 최상위 페이지로, iframe 등이 사용된 환경에서 쓰인다고 한다.
+                    # (사용자 정의 프레임): 직접 프레임 이름을 명시해서 사용할 수도 있다.
+                -->
+        </div>
     </div>
+    <br>
+    <!--목록 출력 영역-->
+    <table class="table table-horizontal table-bordered">
+        <thead class="thead-strong">
+        <tr>
+            <th>게시글 번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>최종수정일</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {{#posts}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{title}}</td>
+                <td>{{author}}</td>
+                <td>{{modifiedDate}}</td>
+            </tr>
+        {{/posts}}
+        </tbody>
+    </table>
 </div>
 
 {{>layout/footer}}
