@@ -41,7 +41,6 @@ public class User {
         this.picture=picture;
         return this;
     }
-
     public String getRoleKey(){
         return this.role.getKey();
     }
