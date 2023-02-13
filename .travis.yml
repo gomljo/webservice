@@ -4,7 +4,7 @@ jdk:
 
 branches:
   only:
-    - master
+    - gomljo
 
 # travis ci 서버의 Home
 cache:
