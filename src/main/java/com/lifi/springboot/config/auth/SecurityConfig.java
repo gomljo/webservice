@@ -21,7 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // h2-console 화면을 사용하기 위해 해당 옵션들을 disable
                 .and()
                     .authorizeRequests() // URL별 권한 관리를 설정하는 옵션의 시작점. antMatchers를 이용하기 위한 전제 조건
-                    .antMatchers("/", "/css/**", "/images/**","/js/**", "/h2-console/**")
+                    .antMatchers("/", "/css/**", "/images/**","/js/**", "/h2-console/**", "/profile")
                     // 권한 관리 대상을 지정하는 옵션
                     // URL, HTTP 메소드별 관리가 가능하다.
                     // "/" 등 지정된 URL들은 permitAll() 옵션을 통해 전체 열람 권한을 부여
